@@ -1,1 +1,1 @@
-# estructuras-y-algoritmos
+# dsa-problems
