@@ -1,4 +1,5 @@
-
+// create a function to know how many adults and minors we have in the array c and gruop them with times that the age is repeated
+//input [12,13,45,32,34,23,45,12,34,56,23,12,11,18,19];
 //Output
 /*
   {
@@ -40,6 +41,21 @@ function agesCount(numbers: number[]){
   }  
 }
 
+function agesCount2(ages: number[]){
+  let countMinors = 0;
+  let countAdults = 0;
+  let group: {[key: number]: number} = {};
+  ages.forEach(age => {
+    if(age < 18) {
+      countMinors++;
+    } else {
+      countAdults++;
+    }
+    group[age]++;
+  })
+}
+
+console.log(agesCount2(ages));
 console.log(agesCount(ages));
 
 

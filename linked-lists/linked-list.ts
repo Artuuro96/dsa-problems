@@ -11,7 +11,7 @@
 
 import { Node } from './node';
 
-class Linkedist {
+export class LinkedList {
   public head: Node | null = null;
   constructor() {}
 
@@ -19,8 +19,7 @@ class Linkedist {
     return head === null ? true : false;
   }
 
-  
-  removeDuplicated(){
+  public removeDuplicated(): void {
     let current: Node | null = this.head;
     if(current == null) return;
     const valuesMap = new Set<number>();
@@ -35,7 +34,7 @@ class Linkedist {
     }
   }
 
-  addNewNode(value: number) {
+  public addNewNode(value: number): void {
     if(this.isEmpty(this.head)) {
       this.head = new Node(value);
       return;
@@ -50,7 +49,7 @@ class Linkedist {
     }
   }
 
-  print() {
+  public print() {
     let current: Node | null = this.head;
     let list: string = '';
     while(current !== null && current.next != null){
@@ -61,19 +60,26 @@ class Linkedist {
   }
 }
 
-const linkedList = new Linkedist();
+function main() {
+  const linkedList = new LinkedList();
 
-linkedList.addNewNode(1);
-linkedList.addNewNode(2);
-linkedList.addNewNode(2);
-linkedList.addNewNode(3);
-linkedList.addNewNode(4);
-linkedList.addNewNode(4);
-linkedList.addNewNode(5);
-linkedList.addNewNode(6);
+  linkedList.addNewNode(1);
+  linkedList.addNewNode(2);
+  linkedList.addNewNode(2);
+  linkedList.addNewNode(3);
+  linkedList.addNewNode(4);
+  linkedList.addNewNode(4);
+  linkedList.addNewNode(5);
+  linkedList.addNewNode(6);
+  
+  linkedList.print();
+  
+  linkedList.removeDuplicated();
+  
+  linkedList.print();
+}
 
-linkedList.print();
+if (require.main === module) {
+  main(); 
+}
 
-linkedList.removeDuplicated();
-
-linkedList.print();
