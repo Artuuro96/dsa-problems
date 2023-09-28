@@ -15,6 +15,7 @@ function sumTwoLists(listA: Node | null, listB: Node | null): Node | null {
 	let aux = new Node(-1);
 	let currentAux = aux;
 	let carry = 0;
+  
 	while(listA != null && listB != null) {
 		let sum = 0;
 
@@ -36,7 +37,7 @@ function sumTwoLists(listA: Node | null, listB: Node | null): Node | null {
 		listB = listB.next;
 		aux = aux.next;
 	}
-	
+
 	if(listA == null && listB != null) {
 			aux.next = new Node(listB?.value + carry);
 			aux = aux.next;

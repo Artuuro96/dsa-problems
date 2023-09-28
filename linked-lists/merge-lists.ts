@@ -16,6 +16,7 @@ export function mergeLinkedList(listA: LinkedList, listB: LinkedList): LinkedLis
 	let currentA = listA.head;
 	let currentB = listB.head;
 	let currentMerged = mergedList.head;
+	
 	while(currentA != null && currentB != null) {
 		if(currentA.value <= currentB.value) {
 			mergedList.addNewNode(currentA.value);
