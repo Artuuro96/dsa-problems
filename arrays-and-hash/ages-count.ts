@@ -11,7 +11,7 @@
   }
 */
 
-const ages = [12,13,45,32,34,23,45,12,34,56,23,12,11,18,19];
+const ages = [1,2,1,2,1,3,2];
 
 
 function groupNumbers(number: number, personMap: Map<number, number[]>){
@@ -41,22 +41,22 @@ function agesCount(numbers: number[]){
   }  
 }
 
-function agesCount2(ages: number[]){
-  let countMinors = 0;
-  let countAdults = 0;
-  let group: {[key: number]: number} = {};
-  ages.forEach(age => {
-    if(age < 18) {
-      countMinors++;
+function agesCount2(numbers: number[]) {
+  let minors = 0;
+  let adults = 0;
+  const groups: Array<{[key: number]: number}> = [];
+  const group: { [key: number]: number } = {};
+  numbers.forEach((number, i) => {
+    if(number <= 18) {
+      minors++;
     } else {
-      countAdults++;
+      adults++
     }
-    group[age]++;
+    group[number] = group[number] === undefined ? 1 : group[number] + 1
   })
 }
 
-console.log(agesCount2(ages));
 console.log(agesCount(ages));
-
+console.log(agesCount2(ages));
 
 

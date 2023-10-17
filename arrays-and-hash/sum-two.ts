@@ -28,9 +28,8 @@ const calculateSumTwo = (arrayNumber: number[], target: number): any => {
     }
     const complement = target - arrayNumber[i];
     complementMap.set(complement, i)
-    console.log(complementMap)
   }
-  return null;
+  return complementMap;
 }
 
-console.log(calculateSumTwo([9,2,6,7,4,3], 7))
+console.log(calculateSumTwo([9,2,6,7,4,3], 8))

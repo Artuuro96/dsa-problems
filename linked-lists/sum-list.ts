@@ -15,7 +15,7 @@ function sumTwoLists(listA: Node | null, listB: Node | null): Node | null {
 	let aux = new Node(-1);
 	let currentAux = aux;
 	let carry = 0;
-  
+
 	while(listA != null && listB != null) {
 		let sum = 0;
 
@@ -55,14 +55,15 @@ function sumTwoLists(listA: Node | null, listB: Node | null): Node | null {
 }
 
 function main() {
-    const linkedListA = new LinkedList();
+  const linkedListA = new LinkedList();
 	const linkedListB = new LinkedList();
 	
+	linkedListA.addNewNode(9);
+	linkedListA.addNewNode(8);
+	linkedListA.addNewNode(9);
 	linkedListA.addNewNode(7);
-	linkedListA.addNewNode(8);
-	linkedListA.addNewNode(8);
-	linkedListA.addNewNode(6);
-    linkedListA.addNewNode(1);
+  linkedListA.addNewNode(1);
+  linkedListA.addNewNode(8);
     
 	
 	linkedListB.addNewNode(9);
