@@ -71,6 +71,10 @@ function main() {
   linkedList.addNewNode(4);
   linkedList.addNewNode(5);
   linkedList.addNewNode(6);
+  linkedList.addNewNode(1);
+  linkedList.addNewNode(1);
+  linkedList.addNewNode(1);
+  linkedList.addNewNode(1);
   
   linkedList.print();
   

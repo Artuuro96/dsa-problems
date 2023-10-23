@@ -54,6 +54,16 @@ function agesCount2(numbers: number[]) {
     }
     group[number] = group[number] === undefined ? 1 : group[number] + 1
   })
+  Object.keys(group).forEach((key: any) => {
+    groups.push({
+      [key]: group[key]
+    });
+  })
+  return {
+    minors, 
+    adults,
+    groups
+  }
 }
 
 console.log(agesCount(ages));
