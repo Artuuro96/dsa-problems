@@ -1,4 +1,4 @@
-console.log('Inicio del programa');
+console.log('Start of the program');
 
 setTimeout(() => {
   console.log('setTimeOut');
@@ -8,7 +8,7 @@ setImmediate(() => {
   console.log('setImmediate');
 });
 
-console.log('Fin del programa');
+console.log('End of the programa');
 
 process.nextTick(() => {
   console.log('process.nextTick');

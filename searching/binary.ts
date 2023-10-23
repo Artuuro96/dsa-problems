@@ -48,9 +48,9 @@ console.time("execution binary search time");
 console.log(findElement(arrGen, 9000));
 console.timeEnd("execution binary search time");
 
-console.time("execution INTERNET time");
+console.time("execution binary search time");
 console.log(findElement(arrGen, 9000));
-console.timeEnd("execution INTERNET time");
+console.timeEnd("execution binary search time");
 
 console.time("execution force search time");
 console.log(arrGen.find((i, index) => {
