@@ -1,16 +1,16 @@
 let temp
 
-function main(a: number, b:number): any {
+function pow(a: number, b:number): any {
   b = Math.floor(b)
-  if(b==0){
+  if(b == 0){
     return 1;
   }
-  temp = main(a, b/2);
-  if(b%2 != 0) {
-    return temp*temp*a
+  temp = pow(a, b/2);
+  if(b % 2 != 0) {
+    return temp * temp * a;
   } else {
-    return temp*a
+    return temp * a;
   }
 }
 
-console.log("=====>", main(3,5));
+console.log("=====>", pow(3,5));
